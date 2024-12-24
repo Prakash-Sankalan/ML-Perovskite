@@ -1,0 +1,48 @@
+SYSTEM = KNbO3 Unit cell
+IVDW=11
+ICHARG = 11         (Non-self-consistent: GGA/LDA band structures)
+ISTART = 1
+LREAL  = .FALSE.       (Projection operators: automatic)
+LWAVE  = .TRUE.        (Write WAVECAR or not)
+LCHARG = .TRUE.        (Write CHGCAR or not)
+ADDGRID= .TRUE.        (Increase grid; helps GGA convergence)
+# LVTOT  = .TRUE.      (Write total electrostatic potential into LOCPOT or not)
+# LVHAR  = .TRUE.      (Write ionic + Hartree electrostatic potential into LOCPOT or not)
+# NELECT =             (No. of electrons: charged cells; be careful)
+# LPLANE = .TRUE.      (Real space distribution; supercells)
+ISYM = 2                    #break symmetry
+NCORE =4 ## not for Hybrids functionals
+NPAR=4
+KPAR = 4
+ALGO = FAST ### Damped or Default for HSE , Fast otherwise
+PREC = Accurate (Precision level)
+EDIFF = 0.000001 ###################### 
+EDIFFG = -0.03 #############################
+NELM=100
+NELMIN=3
+ISMEAR = 0 # do not use for KPOINTS 1x1x1
+SIGMA = 0.03
+GGA = PE ## optional for HSE if the POTCAR are PBE
+ENCUT  =  520        (Cut-off energy for plane wave basis set, in eV)
+LREAL = FALSE ## start Auto-REAL and finish FALSE
+ISPIN=2
+MAGMOM = 1*4.5 1*3.5 3*0.6   #### Ni:0.7 ; Co:1.7 ; Fe:2.2
+
+#Ionic relaxation
+NSW = 0
+IBRION = 2
+ISIF=2   #relax the cell parameters
+
+#DOS related values
+LORBIT=11
+EMIN=-8
+EMAX=8
+NEDOS=1000
+NBANDS=256
+
+
+
+
+
+
+
